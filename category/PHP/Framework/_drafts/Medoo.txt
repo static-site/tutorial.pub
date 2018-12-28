@@ -1,0 +1,5 @@
+tableQuote()
+
+selectContext($join)
+
+['AND']['!REGEXP']

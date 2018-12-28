@@ -1,0 +1,2 @@
+https://github.com/maryo/php-5.5-windows-extensions/tree/master/php_ktaglib-0.3.0-5.5-vc11-x86
+https://github.com/dsp/ktaglib

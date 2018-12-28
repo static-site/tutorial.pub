@@ -1,0 +1,5 @@
+基于Sphinx构建准实时更新的分布式通用搜索引擎平台[原创]
+http://zyan.cc/sphinx_search/
+
+基于Sphinx+MySQL的千万级数据全文检索（搜索引擎）架构设计[原创]
+http://zyan.cc/post/360/

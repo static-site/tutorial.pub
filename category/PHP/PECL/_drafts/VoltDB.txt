@@ -1,0 +1,34 @@
+ Voltdb Client
+Building Voltdb PHP and CPP Client
+1. Download Voltdb Client Php Extension-
+# wget http://voltdb.com/downloads/technologies/client/voltdb-client-php-extension-2.8.4.tar.gz
+2. Extract it to /opt
+cd /opt
+tar -xvzf voltdb-client-php-extension-2.8.4.tar.gz
+[You'll get voltdb-client-cpp and voltdb-client-php under voltdb-client-php-extension-2.8.4
+3. Install dependencies -
+# yum install php-dev glibc-static zlib zlib-devel
+# cd /opt/voltdb-client-php-extension-2.8.4/voltdb-client-cpp
+# make
+# cd /opt/voltdb-client-php-extension-2.8.4/voltdb-client-php
+# phpize
+[ If phpize command not found -
+rpm -Uvh http://epel.mirror.net.in/epel/6/x86_64/epel-release-6-8.noarch.rpm
+rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
+then install php-devel-<version> ]
+4. Configure 
+# ./configure --with-voltdb=/opt/voltdb-client-php-extension-2.8.4/voltdb-client-cpp/ CXXFLAGS="-m64" LDFLAGS="-m64"
+# make
+# vi /etc/php.ini
+-and edit following line
+extension=/opt/voltdb-client-php-extension-2.8.4/voltdb-client-php/modules/voltdb.so
+
+# php -m | grep voltdb
+Output - voltdb
+
+If you have any queries or suggestions, please comment.
+
+Thanks
+
+==================
+http://qiita.com/ytake/items/f61bc752ca1b98bf601e

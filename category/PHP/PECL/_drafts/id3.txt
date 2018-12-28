@@ -1,0 +1,4 @@
+http://www.dllzj.com/php_id3.dll/
+https://github.com/maryo/php-5.5-windows-extensions
+
+http://www.cnblogs.com/xiaozong/p/5742741.html
