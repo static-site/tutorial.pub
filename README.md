@@ -90,10 +90,6 @@ Apache
 
 Git, GitHub
 
-Linux, Shell
-
-容器和虚拟化：Docker, k8s
-
 Vim
 
 Sketch
@@ -115,3 +111,13 @@ LNMP, LAMP
 ## 即服务
 
 SAAS
+
+
+
+## 操作系统
+
+[Windows](category/Windows)
+
+Linux, Shell
+
+容器和虚拟化：Docker, k8s
