@@ -6,7 +6,9 @@
 
 #### 参考：
 
-[2018 年成為 Web 開發人員的路線圖](https://github.com/goodjack/developer-roadmap-chinese)
+[2019 年成為 Web 開發人員的路線圖](https://github.com/goodjack/developer-roadmap-chinese)
+
+https://github.com/OMGZui/noteBook
 
 
 

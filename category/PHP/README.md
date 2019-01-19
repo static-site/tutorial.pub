@@ -10,6 +10,8 @@
 
 [PHP学习](https://www.cnblogs.com/wanglongshuai/category/789475.html)
 
+https://github.com/OMGZui/noteBook/blob/master/php.md
+
 
 
 ## [PEAR](PEAR)
