@@ -44,7 +44,7 @@ Vue, React, Angular
 
 [Node.js](category/Node.js)
 
-Go, Python
+Go, [Python](category/Python)
 
 
 
@@ -52,7 +52,7 @@ Go, Python
 
 SQL
 
-MySQL, SQLite
+[MySQL](category/Database/MySQL), SQLite
 
 Redis, Memcached
 
@@ -70,6 +70,7 @@ jQuery Mobile
 
 React Native
 
+[iOS](category/iOS), [Android](category/Android)
 
 
 ## XML
@@ -84,7 +85,7 @@ Amazon AWS
 
 
 
-## Web Server
+## [Web Server](category/WebServer)
 
 Nginx
 
@@ -124,6 +125,6 @@ SAAS
 
 [Windows](category/Windows)
 
-Linux, Shell
+[Linux](category/Linux), Shell
 
 容器和虚拟化：Docker, k8s
