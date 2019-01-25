@@ -14,7 +14,7 @@ https://github.com/OMGZui/noteBook
 
 ## HTML / CSS
 
-[HTML](category/HTML), [CSS](category/CSS), Bootstrap
+[HTML](category/HTML), [CSS](category/CSS), [Bootstrap](category/CSS/Bootstrap)
 
 Sass, LESS
 
