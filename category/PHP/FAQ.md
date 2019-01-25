@@ -1,7 +1,7 @@
-## х╚╬ж╠Да© $GLOBALS
+## Е┘╗Е╠─Е▐≤И┤▐ $GLOBALS
 
 $GLOBALS['name'] = 'value;
 
-╥етз _construct ╨СцФ╥╫╥╗нч╥╗╥цнй,
+Ф■╬Е°╗ _construct Е░▌И²╒Ф√╧ФЁ∙Ф≈═ФЁ∙Х╝©И≈╝,
 
-╤Ь global $name; ©ирт
+Х─▄ global $name; Е▐╞Д╩╔
