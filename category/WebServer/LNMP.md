@@ -1,5 +1,5 @@
-Nginx 1.5.2 + PHP 5.5.1 + MySQL 5.6.10 ÔÚ CentOS ÏÂµÄ±àÒë°²×°
+Nginx 1.5.2 + PHP 5.5.1 + MySQL 5.6.10 åœ¨ CentOS ä¸‹çš„ç¼–è¯‘å®‰è£…
 http://zyan.cc/nginx_php_v7/
 
-Nginx 0.8.x + PHP 5.2.13£¨FastCGI£©´î½¨Ê¤¹ıApacheÊ®±¶µÄWeb·şÎñÆ÷£¨µÚ6°æ£©[Ô­´´]
+Nginx 0.8.x + PHP 5.2.13ï¼ˆFastCGIï¼‰æ­å»ºèƒœè¿‡Apacheåå€çš„WebæœåŠ¡å™¨ï¼ˆç¬¬6ç‰ˆï¼‰[åŸåˆ›]
 http://zyan.cc/nginx_php_v6/
