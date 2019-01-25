@@ -6,16 +6,16 @@ http://www.iphalcon.cn/
 http://phalconphp.org/
 
 
-ÏÂÔØ:
+ä¸‹è½½:
 https://phalconphp.com/zh/download/windows
-*3.0.4 - PHP5.5£¨+x64£©£¬5.6£¬7.0
+*3.0.4 - PHP5.5ï¼ˆ+x64ï¼‰ï¼Œ5.6ï¼Œ7.0
 
-°²×°:
+å®‰è£…:
 php.ini
 extension=php_phalcon.dll
 
-´´½¨£º
-Ä¿Â¼½á¹¹
+åˆ›å»ºï¼š
+ç›®å½•ç»“æ„
 test/
   app/
     controllers/
@@ -45,7 +45,7 @@ Aphace Httpd
     RewriteRule ^((?s).*)$ index.php?_url=/$1 [QSA,L]
 </IfModule>
 
-»òhttpd.conf
+æˆ–httpd.conf
 <IfModule mod_rewrite.c>
 
     <Directory "/var/www/test">
@@ -63,14 +63,14 @@ Aphace Httpd
 
 </IfModule>
 
-Ê¹ÓÃPHPÄÚÖÃµÄweb·şÎñÆ÷:
+ä½¿ç”¨PHPå†…ç½®çš„webæœåŠ¡å™¨:
 php -S localhost:8000 -t /public .htrouter.php
 
-Phalcon ¿ª·¢¹¤¾ß:
+Phalcon å¼€å‘å·¥å…·:
 https://github.com/phalcon/phalcon-devtools
 http://www.iphalcon.cn/reference/tools.html
 
-Àı×Ó£º
+ä¾‹å­ï¼š
 https://github.com/phalcon/tutorial
 https://github.com/phalcon/invo
 https://github.com/phalcon/vokuro
