@@ -7,15 +7,15 @@ G:\Program_Files\mongodb-win32-i386-2.6.6\bin\mongod.exe --dbpath=G:\Program_Dat
 mongod --config D:\Program_Data\MongoDB-x64\MongoDB.ini --install
 
 
-°²×°:
+å®‰è£…:
 mongod -h
 http://www.cnblogs.com/liuzhiying/p/5915741.html
 http://blog.csdn.net/u010874036/article/details/51921206
 
-ÃüÁî£º
+å‘½ä»¤ï¼š
 https://docs.mongodb.com/manual/reference/command/
 
-PHP À©Õ¹:
+PHP æ‰©å±•:
 
 http://pecl.php.net/package/mongodb 
 
@@ -27,7 +27,7 @@ http://soft.urlnk.com/php
 http://soft.urlnk.com/php/ext
 http://soft.urlnk.com/php/ext/mongodb
 
-¹¤¾ß£º
+å·¥å…·ï¼š
 http://mongodb-tools.com/
 https://docs.mongodb.com/ecosystem/tools/administration-interfaces/
 https://mongodb-documentation.readthedocs.io/en/latest/ecosystem/tools/administration-interfaces.html
@@ -43,11 +43,11 @@ https://github.com/lovetheidea/MoaDB
 http://www.mongoadmin.org/
 
 
-ÅäÖÃÎÄ¼ş:
+é…ç½®æ–‡ä»¶:
 https://my.oschina.net/pwd/blog/399374
 
 
-È¨ÏŞÑéÖ¤:
+æƒé™éªŒè¯:
 https://docs.mongodb.com/manual/reference/method/db.createUser/
 
 db.createUser(
@@ -64,7 +64,7 @@ db.createUser(
 
 http://www.cnblogs.com/zengen/archive/2011/04/23/2025722.html
 
-ÎÄµµ²Î¿¼£º
+æ–‡æ¡£å‚è€ƒï¼š
 https://mongodb-documentation.readthedocs.io
 http://www.cnblogs.com/xinghebuluo/category/338660.html
 http://lovelace.blog.51cto.com/1028430/1440988
