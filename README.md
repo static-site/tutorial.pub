@@ -2,9 +2,13 @@
 
 在线阅读 https://static-site.github.io/tutorial.pub
 
+源代码库 https://github.com/static-site/tutorial.pub
+
+国内镜像 https://gitee.com/git-mirror/tutorial.pub
 
 
-#### 参考：
+
+##### 参考：
 
 [2019 年成為 Web 開發人員的路線圖](https://github.com/goodjack/developer-roadmap-chinese)
 
