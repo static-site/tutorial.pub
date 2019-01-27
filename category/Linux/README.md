@@ -11,6 +11,7 @@ lnmp
 - http://man.linuxde.net/kill
 - https://en.wikipedia.org/wiki/List_of_Unix_commands
 - https://www.gnu.org/software/bash/manual/html_node/
+- https://www.cnblogs.com/peida/tag/每日一linux命令/
 
 ### 文件系统
 touch
@@ -51,3 +52,4 @@ http_load
 
 ## 参考
 - https://github.com/fork-copy/Notes/tree/master/Linux
+- http://www.runoob.com/linux/linux-tutorial.html
