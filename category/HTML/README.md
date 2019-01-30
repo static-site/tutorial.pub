@@ -26,3 +26,10 @@
 ## URL 编码
 
 换行 %0A
+
+## 视频
+iOS 视频禁用自动全屏
+```html
+<video playsinline webkit-playsinline>
+```
+- [iOS 10 Safari 视频播放新政策](https://imququ.com/post/new-video-policies-for-ios10.html)
