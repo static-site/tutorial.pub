@@ -14,6 +14,10 @@ https://github.com/summerblue/laravel5-cheatsheet
 
 https://github.com/summerblue/larabbs
 
+[Laravel 从入门到精通系列教程](https://laravelacademy.org/laravel-tutorial-5_7)
+
+https://github.com/nonfu/laravel-tutorial-code
+
 
 
 ## 扩展包
