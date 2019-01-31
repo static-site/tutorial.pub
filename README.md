@@ -34,7 +34,7 @@ ECMAScript, TypeScript
 
 RequireJS
 
-Vue, React, Angular
+Vue, [React](category/JavaScript/React), Angular
 
 
 
@@ -127,4 +127,4 @@ SAAS
 
 [Linux](category/Linux), Shell
 
-容器和虚拟化：Docker, k8s
+容器和虚拟化：[Docker](category/Docker), k8s
