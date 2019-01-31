@@ -14,6 +14,8 @@
 
 https://github.com/OMGZui/noteBook
 
+https://github.com/CrazyCodes/Blog
+
 
 
 ## HTML / CSS
