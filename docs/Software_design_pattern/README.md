@@ -12,6 +12,7 @@
 
 Java 
 - http://www.runoob.com/design-pattern/design-pattern-tutorial.html
+- https://design-patterns.readthedocs.io
 
 其他
 - [PHP 设计模式阅读清单](https://learnku.com/docs/php-design-patterns/2018/php-design-pattern-reading-list/1525)
