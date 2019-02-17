@@ -107,7 +107,7 @@ Sketch
 
 ## 架构设计
 
-设计模式
+[设计模式](docs/Software_design_pattern)
 
 LNMP, LAMP
 
