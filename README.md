@@ -130,3 +130,8 @@ SAAS
 [Linux](category/Linux), Shell
 
 容器和虚拟化：[Docker](category/Docker), k8s
+
+
+## [网络搜索引擎](category/Web_search_engine)
+
+[OpenSearch](category/Web_search_engine/OpenSearch)
