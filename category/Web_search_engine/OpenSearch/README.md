@@ -409,6 +409,18 @@ http://www.opensearch.org/Specifications/OpenSearch/Extensions/Suggestions/1.0
 - 建议完成的附加信息，例如结果数量
 - 建议完成的查询地址
 
+#### 支持情况
+| 浏览器  | Query String | Completions | Descriptions | Query URLs | 支持 |
+| ------- | ------------ | ----------- | ------------ | ---------- | ---- |
+| Firefox | Yes          | Yes         | No           | No         | 2    |
+| Chrome  | Yes          | Yes         |              |            |      |
+| Edge    |              |             |              |            |      |
+| IE 11   |              |             |              |            |      |
+| IE 8    |              |             |              |            |      |
+| 总计    |            |           |            |         |     |
+
+
+
 ## 更多扩展
 http://www.opensearch.org/Specifications/OpenSearch/Extensions
 
