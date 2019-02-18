@@ -4,6 +4,7 @@ http://www.opensearch.org/
 https://github.com/dewitt/opensearch
 
 ## 自动发现 / 新闻供稿
+title 必须匹配 ShortName
 ```html
 <link rel="search"
       type="application/opensearchdescription+xml"
@@ -15,6 +16,19 @@ https://github.com/dewitt/opensearch
 - Atom: feed 元素里
 
 ## 添加搜索到浏览器
+
+
+### 安装 OpenSearch 插件
+```javascript
+window.external.AddSearchProvider(engineURL);
+```
+
+### 安装 Sherlock 插件
+https://developer.mozilla.org/en-US/docs/Web/API/Window/sidebar/Adding_search_engines_from_Web_pages
+```javascript
+window.sidebar.addSearchEngine(engineURL, iconURL, suggestedName, suggestedCategory);
+```
+
 
 ## 描述文档
 
@@ -172,6 +186,29 @@ https://github.com/dewitt/opensearch
 #### OutputEncoding
 - 默认 UTF-8
 
+
+### Firefox 扩展元素
+about:config 查找项 browser.search.log
+
+- https://developer.mozilla.org/en-US/docs/Web/OpenSearch
+
+
+
+#### moz:SearchForm
+直接访问网站
+```xml
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+                       xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+<moz:SearchForm>https://example.com/search</moz:SearchForm>
+```
+
+#### Url
+地址栏搜索：
+- type="application/x-moz-keywordsearch"
+
+
+#### Image
+支持 data: URI 协议
 
 
 ## 网址模板
