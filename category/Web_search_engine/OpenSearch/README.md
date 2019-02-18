@@ -13,7 +13,7 @@ https://github.com/dewitt/opensearch
 - [响应元素](#响应元素)
 - [搜索建议](#搜索建议)
 - [更多扩展](#更多扩展)
-  - [请求来源 Referrer](#请求来源)
+  - [Referrer](#引用)
 
 ## 自动发现
 title 必须匹配 ShortName
@@ -436,7 +436,7 @@ http://www.opensearch.org/Specifications/OpenSearch/Extensions/Suggestions/1.0
 ## 更多扩展
 http://www.opensearch.org/Specifications/OpenSearch/Extensions
 
-### 请求来源
+### 引用
 http://www.opensearch.org/Specifications/OpenSearch/Extensions/Referrer/1.0
 
 ```xml
