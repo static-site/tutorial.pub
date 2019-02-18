@@ -3,7 +3,19 @@ http://www.opensearch.org/
 
 https://github.com/dewitt/opensearch
 
-## 自动发现 / 新闻供稿
+**目录**
+- [自动发现](#自动发现)
+- [添加搜索到浏览器](#添加搜索到浏览器)
+- [描述文档](#描述文档)
+  - [Firefox-扩展元素](#firefox-扩展元素)
+- [网址模板](#网址模板)
+- [查询元素](#查询元素)
+- [响应元素](#响应元素)
+- [搜索建议](#搜索建议)
+- [更多扩展](#更多扩展)
+  - [请求来源 Referrer](#请求来源)
+
+## 自动发现
 title 必须匹配 ShortName
 ```html
 <link rel="search"
