@@ -385,3 +385,50 @@ head 属性 profile 和 meta 元素
   </body>
 </html>
 ```
+
+## 搜索建议
+http://www.opensearch.org/Specifications/OpenSearch/Extensions/Suggestions/1.0
+
+提供搜索建议网址：
+```xml
+<Url type="application/x-suggestions+json"
+        template="http://example.com/suggest?q={searchTerms}"/>
+```
+
+### JSON 响应格式
+```json
+ [
+   "sea",
+   ["sears","search engines","search engine","search","sears.com","seattle times"],
+   ["7,390,000 results","17,900,000 results","25,700,000 results","1,220,000,000 results","1 result","17,600,000 results"],
+   ["http://example.com?q=sears","http://example.com?q=search+engines","http://example.com?q=search+engine","http://example.com?q=search","http://example.com?q=sears.com","http://example.com?q=seattle+times"]
+ ]
+```
+- 查询字符串
+- 建议完成列表
+- 建议完成的附加信息，例如结果数量
+- 建议完成的查询地址
+
+## 更多扩展
+http://www.opensearch.org/Specifications/OpenSearch/Extensions
+
+### 请求来源
+http://www.opensearch.org/Specifications/OpenSearch/Extensions/Referrer/1.0
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+ <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+   xmlns:referrer="http://a9.com/-/opensearch/extensions/referrer/1.0/">
+   <Url type="application/atom+xml"
+     template="http://example.com/{searchTerms}?src={referrer:source?}"/>
+   <!-- ... -->
+ </OpenSearchDescription>
+```
+
+可能的值：
+- IE-SearchBox
+- IE-Address
+- a9.com
+- firefox-a
+
+
