@@ -1,7 +1,10 @@
 # OpenSearch
-http://www.opensearch.org/
+官方网站 http://www.opensearch.org/
 
-https://github.com/dewitt/opensearch
+版本库 https://github.com/dewitt/opensearch
+
+**工具**
+- https://github.com/wuding/opensearch-php
 
 **目录**
 - [自动发现](#自动发现)
