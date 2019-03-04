@@ -10,7 +10,8 @@
 - [自动发现](#自动发现)
 - [添加搜索到浏览器](#添加搜索到浏览器)
 - [描述文档](#描述文档)
-  - [Firefox-扩展元素](#firefox-扩展元素)
+  - [Firefox 扩展元素](#firefox-扩展元素)
+  - [IE 扩展元素](#ie-扩展元素)
 - [网址模板](#网址模板)
 - [查询元素](#查询元素)
 - [响应元素](#响应元素)
@@ -31,7 +32,7 @@ title 必须匹配 ShortName
 - Atom: feed 元素里
 
 ## 添加搜索到浏览器
-
+- [external object](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms535246%28v%3dvs.85%29)
 
 ### 安装 OpenSearch 插件
 ```javascript
@@ -206,6 +207,37 @@ window.sidebar.addSearchEngine(engineURL, iconURL, suggestedName, suggestedCateg
 about:config 查找项 browser.search.log
 
 - https://developer.mozilla.org/en-US/docs/Web/OpenSearch
+
+### IE 扩展元素
+- [Search Provider Extensibility in Internet Explorer](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/cc891507(v=vs.85))
+- [Internet Explorer Gallery](https://www.microsoft.com/en-us/iegallery)
+
+####  首选搜索结果
+```xml
+<ie:TopResult type="text/html" template="http://www.bing.com/search?q={searchTerms}&amp;src=IE-TopResult&amp;FORM=IETR02" />
+```
+
+#### 可视化搜索建议
+```xml
+<OpenSearchDescription xmlns:ie="http://schemas.microsoft.com/Search/2008/" xmlns="http://a9.com/-/spec/opensearch/1.1/">
+<Url type="application/x-suggestions+xml" template="http://api.bing.com/qsml.aspx?query={searchTerms}&amp;maxwidth={ie:maxWidth}&amp;rowheight={ie:rowHeight}&amp;sectionHeight={ie:sectionHeight}&amp;FORM=IESS02&amp;market={language}" />
+```
+
+#### 新标签页搜索框
+NTLogo 和 NTSearchResult 必须的，NTSearchSuggestion 可选的
+```xml
+<ie:NTLogo type="image/png">http://go.microsoft.com/fwlink/?LinkID=403856&amp;language={language}&amp;scale={scalelevel}&amp;contrast={contrast}</ie:NTLogo>
+<ie:NTSearchResult type="text/html" template="http://www.bing.com/search?q={searchTerms}&amp;src=IE-SearchBox&amp;FORM=IENTSR" />
+<ie:NTTopResult type="text/html" template="http://www.bing.com/search?q={searchTerms}&amp;src=IE-SearchBox&amp;FORM=IENTTR" />
+<ie:NTSearchSuggestion type="application/x-suggestions+xml" template="http://api.bing.com/qsml.aspx?query={searchTerms}&amp;market={language}&amp;maxwidth={ie:maxWidth}&amp;rowheight={ie:rowHeight}&amp;sectionHeight={ie:sectionHeight}&amp;FORM=IENTSS" />
+```
+
+- [Search Box on Internet Explorer 11 New Tab Page](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/dev-guides/dn832639(v=vs.85))
+
+#### 加速器预览窗口
+```xml
+<ie:PreviewUrl type="text/html" template="http://suggestions.example.com/search.aspx?q={searchTerms}"/>
+```
 
 
 
@@ -434,7 +466,41 @@ http://www.opensearch.org/Specifications/OpenSearch/Extensions/Suggestions/1.0
 | IE 8    |              |             |              |            |      |
 | 总计    |            |           |            |         |     |
 
+### XML 响应格式
+- [XML Search Suggestions Format Specification](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/cc891508%28v%3dvs.85%29)
 
+```xml
+<?xml version="1.0"?>
+<SearchSuggestion xmlns="http://schemas.microsoft.com/Search/2008/suggestions">
+    <Query>xbox</Query>
+    <Section>
+    <Separator title="My Text Suggestions"/>
+    <Item>
+        <Text>Xbox 360</Text>
+        <Description>The official Xbox website from Microsoft</Description>
+        <Url>http://www.xbox.com</Url>
+    </Item>
+    <Item>
+        <Text>Xbox cheats</Text>
+        <Description>Codes and walkthroughs</Description>
+        <Url>http://www.example.com/xboxcheatcodes.aspx</Url>
+    </Item>
+    <Item>
+        <Text>Xbox 360 games</Text>
+        <Description>Games and accessories</Description>
+        <Url>http://www.example.com/games</Url>
+    </Item>
+    <Separator />
+    <Item>
+        <Text>xbox 360 lowest price</Text>
+        <Image source="http://www.example.com/xboxcontroller.jpg" alt="Xbox 360 Wireless Controller" width="75" height="75" align="top"/>
+    </Item>
+    <Item>
+        <Text>xbox 360 news</Text>
+    </Item>
+    </Section>
+</SearchSuggestion>
+```
 
 ## 更多扩展
 http://www.opensearch.org/Specifications/OpenSearch/Extensions
@@ -459,3 +525,9 @@ http://www.opensearch.org/Specifications/OpenSearch/Extensions/Referrer/1.0
 - firefox-a
 
 
+## 其他
+- [Pinned Sites](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/hh772707(v%3dvs.85))
+- [Pinned Sites Developer Documentation](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/gg491731(v%3dvs.85))
+- https://testdrive-archive.azurewebsites.net/ | http://www.buildmypinnedsite.com/
+- [OpenService Accelerators Developer Guide](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/cc289775%28v%3dvs.85%29)
+- [Windows Search Assistant](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753632%28v%3dvs.85%29)
