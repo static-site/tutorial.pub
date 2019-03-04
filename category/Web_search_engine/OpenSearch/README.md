@@ -208,6 +208,23 @@ about:config 查找项 browser.search.log
 
 - https://developer.mozilla.org/en-US/docs/Web/OpenSearch
 
+#### moz:SearchForm
+直接访问网站
+```xml
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+                       xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+<moz:SearchForm>https://example.com/search</moz:SearchForm>
+```
+
+#### Url
+地址栏搜索：
+- type="application/x-moz-keywordsearch"
+
+
+#### Image
+支持 data: URI 协议
+
+
 ### IE 扩展元素
 - [Search Provider Extensibility in Internet Explorer](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/cc891507(v=vs.85))
 - [Internet Explorer Gallery](https://www.microsoft.com/en-us/iegallery)
@@ -241,21 +258,6 @@ NTLogo 和 NTSearchResult 必须的，NTSearchSuggestion 可选的
 
 
 
-#### moz:SearchForm
-直接访问网站
-```xml
-<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
-                       xmlns:moz="http://www.mozilla.org/2006/browser/search/">
-<moz:SearchForm>https://example.com/search</moz:SearchForm>
-```
-
-#### Url
-地址栏搜索：
-- type="application/x-moz-keywordsearch"
-
-
-#### Image
-支持 data: URI 协议
 
 
 ## 网址模板
