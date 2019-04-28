@@ -1,5 +1,6 @@
 # httpd-fcgid
 
+```
 FcgidIOTimeout 384
 FcgidConnectTimeout 360
 FcgidOutputBufferSize 128
@@ -9,3 +10,4 @@ FcgidMaxProcesses 16
 FcgidMaxRequestLen 268435456
 ProcessLifeTime 360
 FcgidInitialEnv PHP_FCGI_MAX_REQUESTS 1000
+```
