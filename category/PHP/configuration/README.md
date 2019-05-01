@@ -4,6 +4,30 @@
 
 > About php.ini
 
+PHP 的初始化文件，通常命名为 php.ini，主管 PHP 行为的大多数方面。
+
+
+
+PHP 尝试去查找并加载这个配置从许多地方。
+
+下面是它的搜索顺序的概括：
+
+1. SAPI 模块明确规定的地方。
+
+2. 这 PHPRC 环境变量。（截至 PHP 5.2.0）
+
+3. Windows 上的许多预定义注册表项（截至 PHP 5.2.0）
+
+4. 当前工作目录（除了 CLI）
+
+5. 网络网页服务器的目录（用于 SAPI 模块），或者 PHP 的目录（除非在 Windows 里）
+
+6. 编译时选项 `--with-config-file-path` 目录，或者 Windows 目录（通常 C:\Windows）
+
+   参阅 PHP 文档，获取更多具体信息。
+
+   http://php.net/configuration.file
+
 
 
 > About this file
