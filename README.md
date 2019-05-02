@@ -87,7 +87,7 @@ Amazon AWS
 
 ## [Web Server](category/WebServer)
 
-Nginx
+[Nginx](category/WebServer/Nginx)
 
 [Apache](category/WebServer/Apache)
 
