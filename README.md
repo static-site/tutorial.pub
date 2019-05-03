@@ -54,7 +54,7 @@ SQL
 
 [MySQL](category/Database/MySQL), SQLite
 
-Redis, Memcached
+[Redis](category/Database/Redis), Memcached
 
 MongoDB
 
