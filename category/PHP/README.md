@@ -1,6 +1,6 @@
 # PHP
 
-[PSR](PSR)
+[PSR](PSR) PHP Standard Recommendation
 
 
 
