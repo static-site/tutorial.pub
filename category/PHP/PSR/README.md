@@ -1,4 +1,4 @@
-# PSR
+# PHP Standard Recommendation (PSR)
 
 https://github.com/php-fig/fig-standards 20181213
 
