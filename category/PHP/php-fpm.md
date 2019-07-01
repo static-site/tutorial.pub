@@ -1,4 +1,20 @@
-# 命令行
+# php-fpm
+
+https://php-fpm.org/
+
+https://github.com/dreamcat4/php-fpm
+
+
+
+## 安装
+
+### 参考
+
+- [php-fpm安装、配置与优化](https://blog.csdn.net/resilient/article/details/82420863)
+
+
+
+## 命令行
 
 **帮助**
 
@@ -32,7 +48,7 @@ Usage: php-fpm [-n] [-e] [-h] [-i] [-m] [-v] [-t] [-p <prefix>] [-g <pid>] [-c <
 
 
 
-# 配置
+## 配置
 
 /etc/php-fpm.conf
 ```
@@ -52,10 +68,11 @@ pm.status_path = /status
 **参考**：
 
 - [配置 - FastCGI 进程管理器（FPM）](http://php.net/manual/zh/install.fpm.configuration.php)
+- [php-fpm的两种配置方式](https://www.cnblogs.com/tangxuliang/p/10071329.html)
 
 
 
-# 启动和关闭
+## 启动和关闭
 
 **测试**
 Benny@Taurus /usr/sbin
@@ -96,3 +113,9 @@ Benny@Taurus ~
 > $ kill -USR2 `cat /var/run/php-fpm.pid`
 
 
+
+## 参考
+
+- [PHP-FPM详解](https://www.cnblogs.com/followyou/p/9460058.html)
+
+- [php-fpm在windows平台下的替代方案是什么](http://www.php.cn/php-weizijiaocheng-96138.html)
