@@ -117,5 +117,5 @@ Benny@Taurus ~
 ## 参考
 
 - [PHP-FPM详解](https://www.cnblogs.com/followyou/p/9460058.html)
-
 - [php-fpm在windows平台下的替代方案是什么](http://www.php.cn/php-weizijiaocheng-96138.html)
+- [什么是SAPI，FastCGI，PHP-FPM？学习PHP的必备知识](https://www.jianshu.com/p/38cb8ffa4f23)
