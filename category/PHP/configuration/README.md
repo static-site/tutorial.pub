@@ -2,7 +2,7 @@
 
 #### [PHP]
 
-> About php.ini
+##### About php.ini
 
 PHP 的初始化文件，通常命名为 php.ini，主管 PHP 行为的大多数方面。
 
@@ -30,19 +30,19 @@ PHP 尝试去查找并加载这个配置从许多地方。
 
 
 
-> About this file
+##### About this file
 
 
 
-> Quick Reference
+##### Quick Reference
 
 
 
-> php.ini Options
+##### php.ini Options
 
 
 
-> Language Options
+##### Language Options
 
 engine=On
 
@@ -68,23 +68,27 @@ zend.enable_gc=On
 
 
 
-> Miscellaneous
+##### Miscellaneous
 
 expose_php=On
 
 
 
-> Resource Limits
+##### Resource Limits
 
 max_execution_time=30
 
 max_input_time=60
 
+max_input_nesting_level = 64
+
+;max_input_vars = 1000
+
 memory_limit=128M
 
 
 
-> Error handling and logging
+##### Error handling and logging
 
 error_reporting=E_ALL
 
@@ -106,7 +110,7 @@ html_errors=On
 
 
 
-> Data Handling
+##### Data Handling
 
 variables_order="GPCS"
 
@@ -128,7 +132,7 @@ default_charset="UTF-8"
 
 
 
-> Path and Directories
+##### Path and Directories
 
 doc_root=
 
@@ -140,7 +144,7 @@ enable_dl=Off
 
 
 
-> File Uploads
+##### File Uploads
 
 file_uploads=On
 
@@ -150,7 +154,7 @@ max_file_uploads=20
 
 
 
-> Fopen wrappers
+##### Fopen wrappers
 
 allow_url_fopen=On
 
@@ -160,7 +164,7 @@ default_socket_timeout=60
 
 
 
-> Dynamic Extensions
+##### Dynamic Extensions
 
 extension=bz2
 
@@ -230,7 +234,7 @@ extension=php_amqp.dll
 
 
 
-> Module Settings
+### Module Settings
 
 #### [CLI Server]
 
@@ -435,3 +439,10 @@ curl.cainfo=
 openssl.cafile=D:/env/www/legend/dist/https/curl.haxx.se/ca/cacert.pem
 
 openssl.capath=
+
+#### [Xdebug]
+
+zend_extension=E:\env\win\ProgramData\php\ext\x64\ts\7.3\php_xdebug-2.8.0alpha1-7.3-vc15-x86_64.dll
+xdebug.profiler_enable=On
+xdebug.profiler_output_dir=E:\env\tmp\php\xdebug
+xdebug.trace_output_dir=E:\env\tmp\php\xdebug
