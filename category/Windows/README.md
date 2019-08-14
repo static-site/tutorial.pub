@@ -17,3 +17,27 @@
 ### 关闭
 
 - [怎么在windows10中关闭Windows Defender？](https://jingyan.baidu.com/article/c1a3101e639c6ade656deb17.html)
+
+## 地址栏
+
+桌面
+
+库
+
+家庭组
+
+计算机
+
+网络
+
+控制面板
+
+回收站
+
+### 导航窗格
+
+收藏夹
+
+### 其他
+
+游戏
