@@ -6,13 +6,12 @@
 
 #### 参考：
 
-[PHP 之道](https://github.com/laravel-china/php-the-right-way) 20170806 https://phptherightway.golaravel.com/ 20180814
+- [PHP 之道](https://github.com/laravel-china/php-the-right-way) 20170806 https://phptherightway.golaravel.com/ 20180814
+- [PHP学习](https://www.cnblogs.com/wanglongshuai/category/789475.html)
+- https://github.com/OMGZui/noteBook/blob/master/php.md
 
-[PHP学习](https://www.cnblogs.com/wanglongshuai/category/789475.html)
-
-https://github.com/OMGZui/noteBook/blob/master/php.md
-
-
+## 类库
+- https://www.phpclasses.org/
 
 ## [PEAR](PEAR)
 
@@ -62,4 +61,4 @@ https://github.com/CNCherry/CNZKNET-Cloud/tree/master/ip2c
 
 ## 工具
 
-- [PHP在线编辑器](http://www.php.net.cn)
+- [PHP在线编辑器](http://code.php.net.cn/)
