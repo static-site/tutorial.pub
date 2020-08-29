@@ -154,11 +154,23 @@ max_file_uploads=20
 
 
 
-##### Fopen wrappers
+##### Fopen wrappers 文件打开封装
+
+> 是否允许处理网址（例如 http:// 或 ftp://）作为文件。
+>
+> 允许打开远程文件
 
 allow_url_fopen=On
 
+> 是否允许包含或要求打开网址（像 http:// 或 ftp://）作为文件。
+>
+> 允许包含远程文件
+
 allow_url_include=Off
+
+> 默认超时对于插口基于流（秒）
+>
+> 默认插口超时
 
 default_socket_timeout=60
 
