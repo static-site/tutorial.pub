@@ -1,0 +1,10 @@
+必须
+extension_dir = "ext"
+
+5.6
+date.timezone = PRC
+
+
+推荐
+expose_php = Off
+extension=pdo_mysql
