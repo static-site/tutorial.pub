@@ -1,8 +1,10 @@
-# php.ini
+# php.ini 中文版
 
-#### [PHP]
 
-##### About php.ini
+
+## [PHP] 主要设置
+
+### About php.ini
 
 PHP 的初始化文件，通常命名为 php.ini，主管 PHP 行为的大多数方面。
 
@@ -30,19 +32,19 @@ PHP 尝试去查找并加载这个配置从许多地方。
 
 
 
-##### About this file
+### About this file
 
 
 
-##### Quick Reference
+### Quick Reference
 
 
 
-##### php.ini Options
+### php.ini Options
 
 
 
-##### Language Options
+### Language Options
 
 engine=On
 
@@ -86,13 +88,13 @@ zend.enable_gc=On
 
 
 
-##### Miscellaneous
+### Miscellaneous
 
 expose_php=On
 
 
 
-##### Resource Limits
+### Resource Limits
 
 max_execution_time=30
 
@@ -106,11 +108,16 @@ memory_limit=128M
 
 
 
-##### Error handling and logging 错误处理和记录
+### Error handling and logging 错误处理和记录
 
 
 
-error_reporting=E_ALL
+#### 错误报告
+
+```ini
+; 该指令通知 PHP 您希望采取哪些错误、警告和注意。
+error_reporting = E_ALL
+```
 
 
 
@@ -208,7 +215,40 @@ docref_ext = ".html"
 
 
 
-##### Data Handling 数据处理
+#### 错误信息前置字符串
+
+```ini
+; 输出到错误信息前面的字符串。
+; PHP 默认设置为空白。
+error_prepend_string = "<span style='color: #ff0000'>"
+```
+
+
+
+#### 错误信息追加字符串
+
+```ini
+; 输出到错误信息后面的字符串。
+; PHP 默认设置为空白。
+error_append_string = "</span>"
+```
+
+
+
+#### 错误日志
+
+```ini
+; 记录错误到指定的文件。
+; PHP 默认为空值。
+; 示例：
+; 记录错误到 syslog（Windows 事件日志）
+;error_log = syslog
+error_log = php_errors.log
+```
+
+
+
+### Data Handling 数据处理
 
 
 
@@ -260,6 +300,21 @@ auto_globals_jit=On
 
 
 
+#### 启用 POST 数据读取
+
+```ini
+; PHP 是否读取 POST 数据。
+; 此选项默认启用。
+; 想必，你不想全局禁用此选项。
+; 它导致 $_POST 和 $_FILES 总是为空；你想要读取 POST 数据只能通过 php://input 流封装的方式。
+; 在内存效率上代理请求或处理 POST 数据这样的方式很有用。
+enable_post_data_reading = Off
+```
+
+
+
+
+
 post_max_size=8M
 
 
@@ -302,7 +357,7 @@ default_charset="UTF-8"
 
 
 
-##### Path and Directories 路径和目录
+### Path and Directories 路径和目录
 
 
 
@@ -324,11 +379,19 @@ user_dir=
 
 extension_dir="ext"
 
+
+
+> 是否让 dl() 函数可用。
+>
+> dl() 函数不能很好运行于多线程服务器，比如 IIS 或 Zeus，并且使用它们时是自动禁用的。
+>
+> 启用 dl 函数
+
 enable_dl=Off
 
 
 
-##### File Uploads
+### File Uploads
 
 file_uploads=On
 
@@ -338,7 +401,7 @@ max_file_uploads=20
 
 
 
-##### Fopen wrappers 文件打开封装
+### Fopen wrappers 文件打开封装
 
 > 是否允许处理网址（例如 http:// 或 ftp://）作为文件。
 >
@@ -364,7 +427,7 @@ default_socket_timeout=60
 
 
 
-##### Dynamic Extensions
+### Dynamic Extensions
 
 extension=bz2
 
@@ -434,31 +497,31 @@ extension=php_amqp.dll
 
 
 
-### Module Settings
+## Module Settings 扩展模块设置
 
-#### [CLI Server]
+### [CLI Server]
 
 cli_server.color=On
 
-#### [Date]
+### [Date]
 
-#### [filter]
+### [filter]
 
-#### [iconv]
+### [iconv]
 
-#### [intl]
+### [intl]
 
-#### [sqlite3]
+### [sqlite3]
 
-#### [Pcre]
+### [Pcre]
 
-#### [Pdo]
+### [Pdo]
 
-#### [Pdo_mysql]
+### [Pdo_mysql]
 
-#### [Phar]
+### [Phar]
 
-#### [mail function]
+### [mail function]
 
 SMTP=localhost
 
@@ -466,7 +529,7 @@ smtp_port=25
 
 mail.add_x_header=Off
 
-#### [ODBC]
+### [ODBC]
 
 odbc.allow_persistent=On
 
@@ -480,7 +543,7 @@ odbc.defaultlrl=4096
 
 odbc.defaultbinmode=1
 
-#### [Interbase]
+### [Interbase]
 
 ibase.allow_persistent=1
 
@@ -494,7 +557,7 @@ ibase.dateformat="%Y-%m-%d"
 
 ibase.timeformat="%H:%M:%S"
 
-#### [MySQLi]
+### [MySQLi]
 
 mysqli.max_persistent=-1
 
@@ -514,15 +577,15 @@ mysqli.default_pw=
 
 mysqli.reconnect=Off
 
-#### [mysqlnd]
+### [mysqlnd]
 
 mysqlnd.collect_statistics=On
 
 mysqlnd.collect_memory_statistics=On
 
-#### [OCI8]
+### [OCI8]
 
-#### [PostgreSQL]
+### [PostgreSQL]
 
 pgsql.allow_persistent=On
 
@@ -536,13 +599,13 @@ pgsql.ignore_notice=0
 
 pgsql.log_notice=0
 
-#### [bcmath]
+### [bcmath]
 
 bcmath.scale=0
 
 
 
-#### [browscap] 浏览器功能
+### [browscap] 浏览器功能
 
 > http://browscap.org/
 >
@@ -554,7 +617,7 @@ browscap = extra/browscap.ini
 
 
 
-#### [Session]
+### [Session]
 
 session.save_handler=files
 
@@ -600,23 +663,23 @@ session.trans_sid_tags="a=href,area=href,frame=src,form="
 
 session.sid_bits_per_character=5
 
-#### [Assertion]
+### [Assertion]
 
 zend.assertions=1
 
-#### [COM]
+### [COM]
 
-#### [mbstring]
+### [mbstring]
 
-#### [gd]
+### [gd]
 
-#### [exif]
+### [exif]
 
-#### [Tidy]
+### [Tidy]
 
 tidy.clean_output=Off
 
-#### [soap]
+### [soap]
 
 soap.wsdl_cache_enabled=1
 
@@ -626,15 +689,15 @@ soap.wsdl_cache_ttl=86400
 
 soap.wsdl_cache_limit=5
 
-#### [sysvshm]
+### [sysvshm]
 
-#### [ldap]
+### [ldap]
 
 ldap.max_links=-1
 
-#### [dba]
+### [dba]
 
-#### [opcache]
+### [opcache]
 
 zend_extension="D:/env/win/ProgramFiles/php-7.3.0/ext/php_opcache.dll"
 
@@ -642,17 +705,17 @@ opcache.enable=1
 
 opcache.enable_cli=1
 
-#### [curl]
+### [curl]
 
 curl.cainfo=
 
-#### [openssl]
+### [openssl]
 
 openssl.cafile=D:/env/www/legend/dist/https/curl.haxx.se/ca/cacert.pem
 
 openssl.capath=
 
-#### [Xdebug]
+### [Xdebug]
 
 zend_extension=E:\env\win\ProgramData\php\ext\x64\ts\7.3\php_xdebug-2.8.0alpha1-7.3-vc15-x86_64.dll
 xdebug.profiler_enable=On
