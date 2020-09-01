@@ -180,6 +180,34 @@ html_errors=On
 
 
 
+> 如果 html_errors 设置为 On 并且 docref_root 不为空，
+>
+> PHP 产生可点击错误消息直接到页面描述的错误或函数引起的错误详情。
+>
+> 你可以从 http://php.net/docs 下载 PHP 手册的拷贝
+>
+> 并且改变 docref_root 到你的本地拷贝包括开头 “/”  的基本网址。
+>
+> 你必须同时指定文件扩展名包括点。
+>
+> PHP 的默认行为是让这些设置为空，每个案例中不产生链接到文档。
+>
+> 注意：切勿使用此特征用于生产环境。
+>
+> 示例
+>
+> 参考文档根
+
+docref_root = "/phpmanual/"
+
+
+
+> 参考文档扩展名
+
+docref_ext = ".html"
+
+
+
 ##### Data Handling 数据处理
 
 
@@ -274,9 +302,23 @@ default_charset="UTF-8"
 
 
 
-##### Path and Directories
+##### Path and Directories 路径和目录
+
+
+
+> PHP 页的根目录，仅在非空时使用。
+>
+> 如果 PHP 编译时没有用 FORCE_REDIRECT，
+>
+> 如果你运行 PHP 作为 CGI 运行于任何网页服务器（除 IIS）你应该设置 doc_root
+>
+> 参见文档中安全问题。下面的 cgi.force_redirect 配置作为备用
+>
+> 文档根
 
 doc_root=
+
+
 
 user_dir=
 
