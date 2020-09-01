@@ -1,4 +1,4 @@
-必须
+﻿必须有设置
 extension_dir = "ext"
 
 5.6
@@ -6,5 +6,12 @@ date.timezone = PRC
 
 
 推荐
+include_path=.
 expose_php = Off
 extension=pdo_mysql
+
+默认设置未使用
+browscap=
+
+生产环境不能使用
+docref_root
