@@ -46,6 +46,10 @@ PHP 尝试去查找并加载这个配置从许多地方。
 
 ### Language Options
 
+语言选项
+
+
+
 engine=On
 
 short_open_tag=Off
@@ -84,13 +88,44 @@ disable_classes=
 
 
 
+#### 语法高亮
+
+```ini
+; 语法高亮模式的颜色
+; 设置为 <span style="color: ???????"> 中任何可接受的代码将可用。
+highlight.string  = #DD0000
+highlight.comment = #FF9900
+highlight.keyword = #007700
+highlight.default = #0000BB
+highlight.html    = #000000
+```
+
+> highlight_file()
+>
+> highlight_string()
+
+
+
 zend.enable_gc=On
 
 
 
 ### Miscellaneous
 
-expose_php=On
+其它杂项
+
+
+
+#### 公开 PHP 签名
+
+```ini
+; 决定 PHP 是否可以公开它已安装在服务器上的事实
+; （例如通过添加其签名到网页服务器头信息）。
+; 这样没有任何安全威胁，但这样可使它能够确定你是否在自己的服务器上使用 PHP。
+expose_php = On
+```
+
+
 
 
 
@@ -183,7 +218,18 @@ ignore_repeated_source=Off
 
 report_memleaks=On
 
-html_errors=On
+
+
+#### 以 HTML 显示错误
+
+```ini
+; 当 PHP 显示或记录错误时，它可以格式化错误消息为 HTML 便于易读。
+; 此指令控制是否将错误消息格式化为 HTML.
+; 注意：命令行 SAPI 中此指令硬编码为 Off
+html_errors = On
+```
+
+
 
 
 
@@ -377,7 +423,18 @@ doc_root=
 
 user_dir=
 
-extension_dir="ext"
+
+
+#### 扩展目录
+
+```ini
+; 可加载扩展（模块）存放在哪一个目录。
+; 在 Windows：
+;extension_dir = "ext"
+extension_dir = "./"
+```
+
+
 
 
 
@@ -393,7 +450,18 @@ enable_dl=Off
 
 ### File Uploads
 
-file_uploads=On
+文件上传
+
+
+
+#### 开启文件上传
+
+```ini
+; 是否允许 HTTP 文件上传。
+file_uploads = On
+```
+
+
 
 upload_max_filesize=2M
 
@@ -424,6 +492,18 @@ allow_url_include=Off
 > 默认插口超时
 
 default_socket_timeout=60
+
+
+
+### INI 文件中未列出
+
+
+
+#### [hard_timeout](https://www.php.net/manual/zh/ini.core.php#ini.hard-timeout)
+
+```ini
+hard_timeout = 2
+```
 
 
 
