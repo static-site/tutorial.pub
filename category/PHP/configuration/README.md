@@ -2,7 +2,11 @@
 
 
 
-## [PHP] 主要设置
+## [PHP]
+
+主要设置
+
+
 
 ### About php.ini
 
@@ -143,7 +147,9 @@ memory_limit=128M
 
 
 
-### Error handling and logging 错误处理和记录
+### Error handling and logging
+
+错误处理和记录
 
 
 
@@ -294,7 +300,9 @@ error_log = php_errors.log
 
 
 
-### Data Handling 数据处理
+### Data Handling
+
+数据处理
 
 
 
@@ -403,7 +411,9 @@ default_charset="UTF-8"
 
 
 
-### Path and Directories 路径和目录
+### Path and Directories
+
+路径和目录
 
 
 
@@ -469,7 +479,11 @@ max_file_uploads=20
 
 
 
-### Fopen wrappers 文件打开封装
+### Fopen wrappers
+
+文件打开封装
+
+
 
 > 是否允许处理网址（例如 http:// 或 ftp://）作为文件。
 >
@@ -577,7 +591,11 @@ extension=php_amqp.dll
 
 
 
-## Module Settings 扩展模块设置
+## Module Settings
+
+扩展模块设置
+
+
 
 ### [CLI Server]
 
@@ -685,7 +703,9 @@ bcmath.scale=0
 
 
 
-### [browscap] 浏览器功能
+### [browscap]
+
+浏览器功能
 
 > http://browscap.org/
 >
