@@ -64,7 +64,21 @@ output_buffering=4096
 
 zlib.output_compression=Off
 
-implicit_flush=Off
+
+
+#### 隐式刷新
+
+```ini
+; 隐式刷新让 PHP 告诉输出层在每个输出块之后自动刷新自身。
+; 这样等同于每次调用 print() 或 echo() 及 HTML 块之后调用 PHP 函数 flush()。
+; 开启这个选项严重影响性能所以通常建议仅仅为了调试目的。
+; 注意：这个指令在命令行 SAPI 硬编码为 On。
+implicit_flush = Off
+```
+
+> ob_implicit_flush()
+
+
 
 unserilize_callback_func=
 
@@ -211,9 +225,27 @@ display_starup_errors = On
 
 
 
-log_errors=On
+#### 记录错误
 
-log_errors_max_len=1024
+```ini
+; 除了显示错误之外，PHP 还可以记录错误到位置，例如服务器特定的日志、STDERR，
+; 或者由下面的 error_log 指令设定的位置。
+; 尽管错误不应在生产服务器上显示，但仍应对其进行监控，并且日志记录是实现此目的的一种好方法。
+; 默认值：Off
+; 开发环境值：On
+; 生产环境值：On
+log_errors = On
+```
+
+
+
+#### 记录错误最大长度
+
+```ini
+; 设定 log_errors 的最大长度。在 error_log 中添加了有关源的信息。
+; 默认是 1024，0 允许不做最大长度限制。
+log_errors_max_len = 1024
+```
 
 
 
@@ -409,9 +441,70 @@ default_charset = "UTF-8"
 
 
 
+#### 内部编码
+
+```ini
+; PHP 内部编码设置为空。
+; 如果空，使用 default_charset。
+; 从 PHP 5.6.0 起可用。此设置用于 mbstring 和 iconv 等多字节模块。
+internal_encoding =
+```
+
+
+
+#### 输入编码
+
+```ini
+; PHP 输入编码设置为空。
+; 如果空，使用 default_charset。
+inpput_encoding =
+```
+
+
+
+#### 输出编码
+
+```ini
+; PHP 输出编码设置为空。
+; 如果空，使用 default_charset。
+output_encoding =
+```
+
+
+
 ### Path and Directories
 
 路径和目录
+
+
+
+#### 包含路径
+
+```ini
+; UNIX: "/path1:/path2"
+;include_path = ".:/php/includes"
+;include_path = ".:${USER}/pear/php"
+;
+; Windows: "\path1;\path2"
+;include_path = ".;c:\php\includes"
+;
+; PHP 默认设置是 ".;/path/to/php/pear"
+include_path = ".;C:\php\pear"
+```
+
+> set_include_path()
+>
+> require()
+>
+> include()
+>
+> fopen()
+>
+> file()
+>
+> readfile()
+>
+> file_get_contents()
 
 
 
@@ -611,7 +704,49 @@ cli_server.color = On
 
 ### [filter]
 
+
+
 ### [iconv]
+
+字符转换
+
+
+
+#### 字符转换 - 输入编码
+
+```ini
+; 此 INI 条目已经从 PHP 5.6.0 起弃用。使用全局 input_encoding 替代。
+; 如为空，则使用 default_charset 或 input_encoding 或 iconv.input_encoding。
+; 优先权：default_charset < input_encoding < iconv.input_encoding
+iconv.input_encoding =
+```
+
+> iconv_set_encoding()
+
+
+
+#### 字符转换 - 内部编码
+
+```ini
+; 此 INI 条目已经弃用。使用全局 internal_encoding 替代。
+; 如为空，则使用 default_charset 或 internal_encoding 或 iconv.internal_encoding。
+; 优先权：default_charset < internal_encoding < iconv.internal_encoding
+iconv.internal_encoding =
+```
+
+
+
+#### 字符转换 - 输出编码
+
+```ini
+; 此 INI 条目已经弃用。使用全局 output_encoding 替代。
+; 如为空，则使用 default_charset 或 output_encoding 或 iconv.output_encoding。
+; 优先权：default_charset < output_encoding < iconv.output_encoding
+; 要使用输出编码转换，iconv 的输出处理程序必须设置，否则无法执行输出编码转换。
+iconv.output_encoding =
+```
+
+
 
 ### [intl]
 
