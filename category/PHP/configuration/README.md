@@ -162,7 +162,19 @@ expose_php = On
 
 ### Resource Limits
 
-max_execution_time=30
+资源限制
+
+
+
+#### 最大执行时间
+
+```ini
+; 每个脚本的最大执行时间，单位秒
+; 注意：对于命令行 SAPI，此指令硬编码为 0
+max_execution_time = 30
+```
+
+
 
 max_input_time=60
 
