@@ -689,7 +689,7 @@ extension=php_amqp.dll
 
 ### [CLI Server]
 
-#### 命令行服务器颜色
+#### 命令行服务器 - 颜色
 
 ```ini
 ; 命令行网页服务器是否使用 ANSI 颜色编码在终端输出。
@@ -760,13 +760,79 @@ iconv.output_encoding =
 
 ### [Phar]
 
+
+
 ### [mail function]
 
-SMTP=localhost
+邮件函数
 
-smtp_port=25
 
-mail.add_x_header=Off
+
+#### SMTP 服务器地址
+
+```ini
+; 仅用于 Windows。
+SMTP = localhost
+```
+
+
+
+#### SMTP 服务器端口
+
+```ini
+smtp_port = 25
+```
+
+
+
+#### 邮件发送人地址
+
+```ini
+; 仅用于 Windows。
+sendmail_from = me@example.com
+```
+
+
+
+#### 邮件发送路径
+
+```ini
+; 仅用于 UNIX。你也可以提供参数（默认：“sendmail -t -i”）。
+sendmail_path =
+```
+
+
+
+#### 邮件 - 强制额外参数
+
+```ini
+; 强制将指定参数的添加作为额外参数传递给 sendmail 二进制文件。
+; 即使在安全模式下，这些参数也始终替换 mail() 的第五个参数的值。
+mail.force_extra_parameters =
+```
+
+
+
+#### 邮件 - 添加自定义消息头
+
+```ini
+; 添加 X-PHP-Originating-Script：包含脚本的 UID 和文件名
+mail.add_x_header = Off
+```
+
+
+
+#### 邮件 - 日志
+
+```ini
+; 将记录所有 mail() 调用的日志文件路径。
+; 日志条目包括脚本的完整路径、行号、收件人地址和标题。
+; 记录邮件日志到 syslog（Windows 事件日志）。
+;mail.log = syslog
+mail.log =
+```
+
+
 
 ### [ODBC]
 
