@@ -176,13 +176,44 @@ max_execution_time = 30
 
 
 
-max_input_time=60
+#### 最大输入时间
 
+```ini
+; 每个脚本可用于分析请求数据的最长时间。
+; 最好在生产服务器上限制此时间，以消除运行时间过长的脚本。
+; 注意：在命令行 SAPI 此指令硬编码为 -1
+; 默认值：-1（无限制）
+; 开发环境值：60（60秒）
+; 生产环境值：60（60秒）
+max_input_time = 60
+```
+
+
+
+#### 最大输入嵌套级别
+
+```ini
+; 最大输入变量嵌套级别
 max_input_nesting_level = 64
+```
 
-;max_input_vars = 1000
 
-memory_limit=128M
+
+#### 最大输入变量
+
+```ini
+; 可以接受多少个 GET/POST/COOKIE 输入变量
+max_input_vars = 1000
+```
+
+
+
+#### 内存限制
+
+```ini
+; 一个脚本可以消耗的最大内存数
+memory_limit = 128M
+```
 
 
 
@@ -574,7 +605,14 @@ file_uploads = On
 
 upload_max_filesize=2M
 
-max_file_uploads=20
+
+
+#### 最大文件上传数
+
+```ini
+; 单个请求可以上传文件的最大数量
+max_file_uploads = 20
+```
 
 
 
