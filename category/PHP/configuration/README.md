@@ -58,7 +58,15 @@ engine=On
 
 short_open_tag=Off
 
-precision=14
+
+
+#### 精确
+
+```ini
+; 浮点数中显示的有效位数。
+; -1 表示将使用舍入此类数字的增强算法。
+precision = 14
+```
 
 
 
@@ -88,6 +96,13 @@ output_buffering = 4096
 #### 输出处理
 
 ```ini
+; 你可以把脚本的所有输出转到一个函数。
+; 例如，你设置 output_handler 为 “mb_output_handler”，字符编码将透明地转换为指定的编码。
+; 设置任何输出处理程序将自动开启输出缓冲。
+; 注意：编写可移植脚本的人不应该依赖于此 ini 指令。而是使用 ob_start() 显式设置输出处理程序。
+;   除非你知道脚本在做什么，否则使用此 ini 指令可能会导致问题。
+; 注意：你不能同时使用 “mb_output_handler” 和 “ob_iconv_handler”，
+;   也不能同时使用 “ob_gzhandler” 和 “zlib.output_compression”。
 output_handler =
 ```
 
@@ -484,7 +499,13 @@ enable_post_data_reading = Off
 
 
 
-post_max_size=8M
+#### 表单最大大小
+
+```ini
+; PHP 将接受的表单数据最大大小。
+; 它的值可以是 0 以禁用限制。如果通过 enable_post_data_reading 禁用了 POST 数据读取，则将忽略它。
+post_max_size = 8M
+```
 
 
 
@@ -850,7 +871,31 @@ iconv.output_encoding =
 
 ### [Pdo_mysql]
 
+
+
 ### [Phar]
+
+PHP 存档
+
+
+
+```ini
+phar.readonly = On
+```
+
+
+
+```ini
+; 强制归档文件包含签名
+phar.require_hash = On
+```
+
+
+
+```ini
+; 网页服务器启动时预先解析映射的归档文件
+phar.cache_list = C:\path\to\phar1.phar;C:\path\to\phar2.phar
+```
 
 
 
