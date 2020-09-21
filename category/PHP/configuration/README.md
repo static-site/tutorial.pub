@@ -492,7 +492,22 @@ variables_order="GPCS"
 
 request_order="GP"
 
-register_argc_argv=Off
+
+
+#### 注册参数变量
+
+```ini
+; 此指令决定 PHP 运行时是否注册 $argv 和 $argc。
+; $argv 包含调用脚本时传递到 PHP 所有参数的数组。
+; $argc 包含调用脚本时传递的参数数量表示的整数。
+; 从命令行运行脚本时这些数组极其有用。
+; 此指令启用时，每当脚本执行时注册这些变量消耗 CPU 和内存。性能原因，产品服务器上应禁用此功能。
+; 注意：CLI SAPI 此指令硬编码为 On
+; 默认值：On
+; 开发环境值：Off
+; 生产环境值：Off
+register_argc_argv = Off
+```
 
 
 
