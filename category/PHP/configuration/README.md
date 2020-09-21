@@ -390,7 +390,22 @@ ignore_repeated_source = Off
 
 
 
-report_memleaks=On
+#### 报告内存泄露
+
+```ini
+; 如果此参数设置为 Off，则不会显示内存泄露（在 stdout 或日志中）。
+; 这仅在调试编译中有效，或者如果错误报告在允许的列表中包含 E_WARNING
+report_memleaks = On
+```
+
+
+
+#### 报告 Zend 调试
+
+```ini
+; 此设置默认开启
+report_zend_debug = 0
+```
 
 
 
