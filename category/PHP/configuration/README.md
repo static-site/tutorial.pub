@@ -194,6 +194,27 @@ ignore_user_abort = On
 
 
 
+#### 真实路径缓存大小
+
+```ini
+; 决定 PHP 将使用的 realpath 缓存大小。
+; 在 PHP 打开许多文件以反映已执行文件操作的数量的系统上，应增加该值。
+; 注意：如果设置了 open_basedir 此缓存将被禁用
+realpath_cache_size = 4096k
+```
+
+
+
+#### 真实路径缓存时长
+
+```ini
+; 持续时间（单位秒），用于缓存 realpath 给定文件或目录的信息。
+; 对于很少更改文件的系统，考虑增加此值。
+realpath_cache_ttl = 120
+```
+
+
+
 zend.enable_gc=On
 
 
