@@ -144,7 +144,7 @@ implicit_flush = Off
 ; 反序列化回调函数将被调用（用未定义类名作为参数），如果反序列化器找到未定义类将被实例化。
 ; 如果规定函数未定义，或此函数不能包含实现缺少的类，将出现一个警告。
 ; 如果确实要实现这样的回调函数，请仅设置此条目。
-unserilize_callback_func =
+unserialize_callback_func =
 ```
 
 > unserialize()
@@ -447,6 +447,19 @@ report_memleaks = On
 ```ini
 ; 此设置默认开启
 report_zend_debug = 0
+```
+
+
+
+#### 跟踪错误
+
+```ini
+; 存储最后的错误或警告在 $php_errormsg 里。
+; 此指令已经废弃（PHP 7.2.0）。
+; 默认值：Off
+; 开发环境值：Off
+; 生产环境值：Off
+track_errors = Off
 ```
 
 
