@@ -843,7 +843,21 @@ file_uploads = On
 
 
 
-upload_max_filesize=2M
+#### 上传临时目录
+
+```ini
+; HTTP 上传文件的临时目录（如未指定，将使用系统默认值）。
+upload_tmp_dir =
+```
+
+
+
+#### 上传最大文件大小
+
+```ini
+; 上传文件的最大允许大小。
+upload_max_filesize = 2M
+```
 
 
 
