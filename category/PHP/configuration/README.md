@@ -518,6 +518,42 @@ error_log = php_errors.log
 
 
 
+#### 系统日志 - 前缀
+
+```ini
+; 记录到 syslog 的每条消息的前置字符串。
+; 仅在 error_log 设置为 syslog 时使用。
+syslog.ident = php
+```
+
+
+
+#### 系统日志 - 类型
+
+```ini
+; 指定记录消息的程序类型。
+; 仅在 error_log 设置为 syslog 时使用。
+syslog.facility = user
+```
+
+
+
+#### 系统日志 - 过滤
+
+```ini
+; 设置此选项禁用过滤控制字符（默认）。
+; 一些记录器仅接受 NVT-ASCII，而另一些接受任何非控制字符。
+; 如果你的记录器接受所有，则根本无需过滤。
+; 允许的值：
+;   ascii 所有可打印 ASCII 字符和 NL
+;   no-ctrl 控制字符以外所有字符
+;   all 所有字符
+;   raw 像 all 一样，但是消息在换行符之间不会分割
+syslog.filter = ascii
+```
+
+
+
 ### Data Handling
 
 数据处理
@@ -754,6 +790,18 @@ user_dir=
 ;extension_dir = "ext"
 extension_dir = "./"
 ```
+
+
+
+#### 系统临时目录
+
+```ini
+; 临时文件将存放的目录位置。
+; 默认为系统默认
+sys_temp_dir = "/tmp"
+```
+
+> sys_get_temp_dir()
 
 
 
