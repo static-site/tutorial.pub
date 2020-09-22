@@ -126,9 +126,39 @@ implicit_flush = Off
 
 
 
-unserilize_callback_func=
+#### 反序列化回调函数
 
-serialize_precision=-1
+```ini
+; 反序列化回调函数将被调用（用未定义类名作为参数），如果反序列化器找到未定义类将被实例化。
+; 如果规定函数未定义，或此函数不能包含实现缺少的类，将出现一个警告。
+; 如果确实要实现这样的回调函数，请仅设置此条目。
+unserilize_callback_func =
+```
+
+> unserialize()
+
+
+
+#### 反序列化最大深度
+
+```ini
+; 此选项规定反序列化结构默认深度限制。
+; 深度限制设置太高可能导致反序列化过程中堆栈溢出。
+; 单个 unserialize() 调用的最大深度选项将覆盖此项设置。
+; 值为 0 将禁用深度限制。
+unserialize_max_depth = 4096
+```
+
+
+
+#### 序列化精度
+
+```ini
+; 序列化单精度和双精度浮点数时，在浮点数之后存储 serialize_precision 有效数字。
+; 缺省值确保 unserialize 解码浮点数时，数据保持不变。编码双精度值时，该值还用于 json_encode。
+; 如果使用 -1，则使用 dtoa 模式 0，自动选择最佳精度。
+serialize_precision = -1
+```
 
 
 
