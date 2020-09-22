@@ -503,9 +503,32 @@ arg_separator.input = ";&"
 
 
 
-variables_order="GPCS"
+#### 全局变量顺序
 
-request_order="GP"
+```ini
+; 此指令决定 PHP 启动时注册哪些超全局数组。
+; G,P,C,E 和 S 是超全局变量 GET, POST, COOKIE, ENV 和 SERVER 对应的缩写。
+; 注册这些数组会损失性能，并且因为 ENV 不像其他那样常用，不推荐在生产服务器上使用。
+; 你仍然可以通过 getenv() 访问你需要的环境变量。
+; 默认值："EGPCS"
+; 开发环境值："GPCS"
+; 生产环境值："GPCS"
+variables_order = "GPCS"
+```
+
+
+
+#### 请求变量顺序
+
+```ini
+; 此指令决定哪些超全局数据（G,P & C）将被注册到超全局数组 REQUEST。同时决定注册数据的顺序。
+; 该指令的值以与 variables_order 指令相同的方式指定，除非仅一个。
+; 此值为空 PHP 将使用 variables_order 指令中设置的值。这不意味着超全局数组 REQUEST 为空。
+; 默认值：无
+; 开发环境值："GP"
+; 生产环境值："GP"
+request_order = "GP"
+```
 
 
 
