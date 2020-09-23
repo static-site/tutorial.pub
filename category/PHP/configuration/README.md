@@ -1110,6 +1110,51 @@ cli_server.color = On
 
 ### [Date]
 
+日期
+
+
+
+#### 日期 - 时区
+
+```ini
+; 定义 date 函数使用的默认时区
+date.timezone =
+```
+
+
+
+#### 日期 - 默认纬度
+
+```ini
+date.default_latitude = 31.7667
+```
+
+
+
+#### 日期 - 默认经度
+
+```ini
+date.default_longitude = 35.2333
+```
+
+
+
+#### 日期 - 日出天顶
+
+```ini
+date.sunrise_zenith = 90.583333
+```
+
+
+
+#### 日期 - 日落天顶
+
+```ini
+date.sunset_zenith = 90.583333
+```
+
+
+
 ### [filter]
 
 
