@@ -1226,7 +1226,40 @@ iconv.output_encoding =
 
 ### [sqlite3]
 
-### [Pcre]
+
+
+### [[Pcre]](https://www.php.net/manual/en/pcre.configuration.php)
+
+正则表达式（与 Perl 兼容）
+
+
+
+#### pcre - 回溯限制
+
+```ini
+pcre.backtrack_limit = 100000
+```
+
+
+
+#### pcre - 递归限制
+
+```ini
+; 请注意，如果将此值设置太高，可能会消耗所有可用的进程堆栈，并最终导致 PHP 崩溃（由于达到了操作系统规定的堆栈大小限制）。
+pcre.recursion_limit = 100000
+```
+
+
+
+#### pcre - 即时编译
+
+```ini
+; 启用或禁用 JIT 模式编译。
+; 这要求 PCRE 库在 JIT 支持下编译。
+pcre.jit = 1
+```
+
+
 
 ### [Pdo]
 
