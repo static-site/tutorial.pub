@@ -1620,9 +1620,40 @@ browscap = extra/browscap.ini
 
 
 
-### [Session]
+### [[Session]](https://www.php.net/manual/en/session.configuration.php)
 
-session.save_handler=files
+会话
+
+
+
+#### 会话 - 保存处理程序
+
+```ini
+; 用于存储和检索数据的处理程序。
+session.save_handler = files
+```
+
+
+
+#### 会话 - 保存路径
+
+```ini
+; 参数传递给 save_handler。
+; 对于 files 这是存储数据文件的路径。
+; 注意：Windows 用户必须更改此变量，以便使用 PHP 的会话函数。
+; 路径可以定义为："N;/path"
+; 其中 N 是整数。
+; 与其将所有会话文件存储在 /path 中，不如使用深度为 N 级的子目录，并且将会话数据存储在这些目录中。
+; 如果你的操作系统在一个目录存放很多文件出现问题时这样很有用，并且是处理许多会话的服务器的更有效布局。
+; 注意一：PHP 不会自动创建此目录结构。你可以为此目的在 ext/session 目录中使用脚本。
+; 注意二：如果你选择使用子目录进行会话存储，请参见下面垃圾回收的部分。
+; 默认情况下，文件存储模块创建文件使用模式 600。
+; 你可以更改，使用："N;MODE;/path"
+; 其中 MODE 是模式的八进制表示。注意这不会覆盖进程的 umask。
+session.save_path = "/tmp"
+```
+
+
 
 session.use_strict_mode=0
 
