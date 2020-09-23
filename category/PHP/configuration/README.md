@@ -589,6 +589,17 @@ syslog.filter = ascii
 
 
 
+#### WINDOWS - 显示 CRT 警告
+
+```ini
+; 默认值：0
+; 开发环境值：0
+; 生产环境值：0
+windows.show_crt_warning = 0
+```
+
+
+
 ### Data Handling
 
 数据处理
