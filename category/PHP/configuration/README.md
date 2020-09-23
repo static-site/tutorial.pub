@@ -486,6 +486,24 @@ track_errors = Off
 
 
 
+#### XML-RPC - 关闭错误
+
+```ini
+; 关闭标准错误报告并发出 XML-RPC 错误
+xmlrpc_errors = 0
+```
+
+
+
+#### XML-RPC - 错误编号
+
+```ini
+; XML-RPC 错误码
+xmlrpc_error_number = 0
+```
+
+
+
 #### 以 HTML 显示错误
 
 ```ini
