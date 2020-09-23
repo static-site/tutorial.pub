@@ -1293,6 +1293,34 @@ phar.cache_list = C:\path\to\phar1.phar;C:\path\to\phar2.phar
 
 
 
+### [[readline]](https://www.php.net/manual/en/readline.configuration.php)
+
+
+
+#### 命令行 - 分页器
+
+```ini
+; 显示命令行输出的外部工具。
+cli.pager = less
+```
+
+
+
+#### 命令行 - 提示
+
+```ini
+; 转义序列：
+;   \e 用于为提示添加颜色。示例 \e[032m\v \e[031m\b \e[34m\> \e[0m
+;   \v PHP 版本。
+;   \b 指示 PHP 位于哪个块中。例如 /* 表示在多行注释中。外部范围由 PHP 表示。
+;   \> 表示提示字符。默认是 >，但是外壳位于未终止的块或字符串时会更改。可能的字符是：' " { ( >
+; 交互模式：
+; php > #cli.prompt=`echo date('H:i:s');` php >
+cli.prompt = "\\b \\> "
+```
+
+
+
 ### [mail function]
 
 邮件函数
