@@ -1451,6 +1451,51 @@ mysqlnd.log_mask = 0
 
 
 
+#### mysqlnd - 内存池默认大小
+
+```ini
+; mysqlnd 内存池的默认大小，由结果集使用。
+mysqlnd.mempool_default_size = 16000
+```
+
+
+
+#### mysqlnd - 网络命令缓冲大小
+
+```ini
+; 向 MySQL 发送命令时使用的预分配缓冲区大小（单位字节）。
+mysqlnd.net_cmd_buffer_size = 2048
+```
+
+
+
+#### mysqlnd - 网络缓冲读取大小
+
+```ini
+; 用于读取服务器发送的数据的预分配缓冲区大小（单位字节）。
+mysqlnd.net_read_buffer_size = 32768
+```
+
+
+
+#### mysqlnd - 网络读取超时
+
+```ini
+; 网络请求超时（单位秒）。
+mysqlnd.net_read_timeout = 31536000
+```
+
+
+
+#### mysqlnd - 服务器公共密钥
+
+```ini
+; SHA-256 身份验证插件相关。MySQL 服务器公共 RSA 密钥文件。
+mysqlnd.sha256_server_public_key =
+```
+
+
+
 ### [OCI8]
 
 ### [PostgreSQL]
