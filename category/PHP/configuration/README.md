@@ -1157,6 +1157,26 @@ date.sunset_zenith = 90.583333
 
 ### [filter]
 
+过滤
+
+
+
+#### 过滤 - 默认
+
+```ini
+; 过滤 $_GET, $_POST, $_COOKIE, $_REQUEST 和 $_SERVER 数据。
+filter.default = unsafe_raw
+```
+
+
+
+#### 过滤 - 默认标志
+
+```ini
+; 设置了默认过滤器时将应用默认标志。
+filter.default_flags =
+```
+
 
 
 ### [iconv]
