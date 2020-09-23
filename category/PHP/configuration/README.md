@@ -1356,7 +1356,25 @@ session.sid_bits_per_character=5
 
 ### [Assertion]
 
-zend.assertions=1
+断言
+
+
+
+#### Zend  - 断言
+
+```ini
+; 切换是否完全编译断言（在运行时没有开销）
+; -1 完全不编译
+;  0 运行时跳过断言
+;  1 执行断言
+; 只能从 php.ini 中更改为负值！（用于在运行时打开和关闭断言，参见 zend.assertions = 1 时的assert.active）
+; 默认值：1
+; 开发环境值：1
+; 生产环境值：-1
+zend.assertions = 1
+```
+
+
 
 ### [COM]
 
