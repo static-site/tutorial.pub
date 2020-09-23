@@ -1336,9 +1336,18 @@ pgsql.ignore_notice=0
 
 pgsql.log_notice=0
 
+
+
 ### [bcmath]
 
-bcmath.scale=0
+#### 数学 - 小数位数
+
+```ini
+; 所有 bcmath 函数的小数位数。
+bcmath.scale = 0
+```
+
+> bcscale()
 
 
 
