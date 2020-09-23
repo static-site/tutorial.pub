@@ -402,6 +402,7 @@ max_input_vars = 1000
 
 ```ini
 ; 一个脚本可以消耗的最大内存数
+; -1 没有内存限制
 memory_limit = 128M
 ```
 
@@ -1492,6 +1493,23 @@ mysqlnd.net_read_timeout = 31536000
 ```ini
 ; SHA-256 身份验证插件相关。MySQL 服务器公共 RSA 密钥文件。
 mysqlnd.sha256_server_public_key =
+```
+
+
+
+#### mysqlnd - 获取数据副本
+
+```ini
+; 如果使用 PDO_MySQL（尚未支持） 则不设置。
+mysqlnd.fetch_data_copy = 1
+```
+
+
+
+#### mysqlnd - 跟踪分配
+
+```ini
+mysqlnd.trace_alloc =
 ```
 
 
