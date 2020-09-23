@@ -1379,11 +1379,77 @@ mysqli.default_pw=
 
 mysqli.reconnect=Off
 
+
+
 ### [mysqlnd]
 
-mysqlnd.collect_statistics=On
+MySQL 原生驱动
 
-mysqlnd.collect_memory_statistics=On
+
+
+#### mysqlnd - 收集统计
+
+```ini
+; 通过 mysqlnd 启用或禁用常规统计信息收集，可用于调整和监视 MySQL 操作。
+mysqlnd.collect_statistics = On
+```
+
+
+
+#### mysqlnd - 收集内存统计
+
+```ini
+; 通过 mysqlnd 启用或禁用内存使用统计信息收集，可用于调整和监视 MySQL 操作。
+mysqlnd.collect_memory_statistics = On
+```
+
+
+
+#### mysqlnd - 调试
+
+```ini
+; 使用 mysqlnd 记录从所有扩展到指定日志文件的通信。
+; 此指令的格式 "option1[,parameter_option1][:option2[,parameter_option2]]"
+; 格式字符串的选项如下：
+;   A[,file] 将跟踪输出追加到指定文件。还确保每次写入后都写入数据。这是通过关闭并重新打开跟踪文件来完成的（这很慢）。它有助于确保完整的日志文件，如果应用程序崩溃。
+;   a[,file] 将跟踪输出追加到指定文件。
+;   d 为当前状态启用来自 DBUG_<N> 宏的输出。可能紧随其后的关键字列表，仅选择具有该关键字的 DBUG 宏的输出。关键字列表为空表示所有宏的输出。
+;   f[,functions] 限制调试器操作为指定的函数列表。空的函数列表表示已选择所有函数。
+;   F 用包含导致输出的宏的源文件名称标记每条调试器输出行。
+;   i 用当前进程的 PID 标记每条调试器输出线。
+;   L 用引起输出的宏的源文件行号名称标记每条调试器输出行。
+;   n 用当前函数嵌套深度标记每条调试器输出行
+;   o[,file] 类似于 a[,file] 但是会覆盖旧文件，且不追加。
+;   O[,file] 类似于 A[,file] 但是会覆盖旧文件，且不追加。
+;   t[,N] 启用函数控制流跟踪。最大嵌套深度由 N 指定，默认值为 200。
+;   x 此选项激活分析。
+;   m 跟踪内存分配和释放相关的调用。
+; 例子：
+;   d:t:x:O,/tmp/mysqlnd.trace
+mysqlnd.debug =
+```
+
+
+
+#### mysqlnd - 日志标记
+
+```ini
+; 定义将记录哪些查询。缺省值 0 禁用日志。例如值为 48（16 + 32）
+; 类型如下：
+;   SERVER_STATUS_IN_TRANS=1
+;   SERVER_STATUS_AUTOCOMMIT=2
+;   SERVER_MORE_RESULTS_EXISTS=8
+;   SERVER_QUERY_NO_GOOD_INDEX_USED=16
+;   SERVER_QUERY_NO_INDEX_USED=32
+;   SERVER_STATUS_CURSOR_EXISTS=64
+;   SERVER_STATUS_LAST_ROW_SENT=128
+;   SERVER_STATUS_DB_DROPPED=256
+;   SERVER_STATUS_NO_BACKSLASH_ESCAPES=512
+;   SERVER_QUERY_WAS_SLOW=1024
+mysqlnd.log_mask = 0
+```
+
+
 
 ### [OCI8]
 
