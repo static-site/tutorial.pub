@@ -46,6 +46,28 @@ PHP 尝试去查找并加载这个配置从许多地方。
 
 ### php.ini Options
 
+配置文件选项
+
+
+
+#### 用户配置 - 文件名
+
+```ini
+; 用户定义的 php.ini (.htaccess) 文件名称。默认是 ".user.ini"
+; 设置此项为空值来禁用此功能
+user_ini.filename = ".user.ini"
+```
+
+
+
+#### 用户配置 - 缓存时间
+
+```ini
+; 用户定义的 php.ini 文件存活时间 (time-to-live) 秒数。
+; 默认是 300 秒（5 分钟）
+user_ini.cache_ttl = 300
+```
+
 
 
 ### Language Options
@@ -791,7 +813,12 @@ doc_root =
 
 
 
-user_dir=
+#### 用户目录
+
+```ini
+; 非空情况下，PHP 使用 /~username 打开此目录下的脚本。
+user_dir = public_php
+```
 
 
 
