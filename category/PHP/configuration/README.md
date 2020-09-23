@@ -279,7 +279,55 @@ realpath_cache_ttl = 120
 
 
 
-zend.enable_gc=On
+#### Zend - 启用垃圾回收
+
+```ini
+; 启用或禁用循环参考收集器。
+zend.enable_gc = On
+```
+
+
+
+#### Zend - 多字节
+
+```ini
+; 如果启用，脚本可能会以与扫描器不兼容的编码编写。
+; CP936, Big5, CP949 和 Shift_JIS 是此类编码的示例。
+; 使用此功能，必须启用 mbstring 扩展。
+; 默认值：Off
+zend.multibyte = Off
+```
+
+
+
+#### Zend - 脚本编码
+
+```ini
+; 允许设置脚本默认编码。
+; 除非脚本顶部出现 "declare(encoding=...)" 指令，否则将使用该值。
+; 仅在设置了 zend.multibyte 情况下才起作用。
+; 默认值：""
+zend.script_encoding =
+```
+
+
+
+#### Zend - 异常忽略参数
+
+```ini
+; 允许从为异常生成的堆栈跟踪中包括或排除参数
+; 默认值：Off
+zend.exception_ignore_args = Off
+```
+
+
+
+#### Zend - 探测统一码
+
+```ini
+; 检查 BOM（字节顺序标记），查看文件是否包含有效的多字节字符。
+zend.detect_unicode = On
+```
 
 
 
