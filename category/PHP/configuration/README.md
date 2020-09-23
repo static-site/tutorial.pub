@@ -1655,25 +1655,111 @@ session.save_path = "/tmp"
 
 
 
-session.use_strict_mode=0
+#### 会话 - 使用严格模式
 
-session.use_cookies=1
+```ini
+; 是否使用严格的会话模式。
+; 严格模式不接受未初始化的会话 ID，并且如果浏览器发送未初始化的会话 ID 则重新生成会话 ID。
+; 严格模式通过会话采用保护应用程序免于会话固定脆弱性。
+; 默认禁用为了最大程度地兼容，但建议启用它。
+session.use_strict_mode = 0
+```
 
-session.use_only_cookies=1
 
-session.name=PHPSESSID
 
-session.auto_start=0
+#### 会话 - 使用 Cookies
 
-session.cookie_lifetime=0
+```ini
+; 是否在客户端使用 Cookies 存放会话 ID。
+session.use_cookies = 1
+```
 
-session.cookie_path=/
 
-session.cookie_domain=
 
-session.cookie_httponly=
+#### 会话 - Cookie 安全连接
 
-session.cookie_samesite=
+```ini
+; 是否通过安全连接发送 Cookie。
+session.cookie_secure =
+```
+
+
+
+#### 会话 - 仅使用 Cookies
+
+```ini
+; 此选项强制 PHP 获取和使用 Cookie 进行存储和维护会话 ID。
+; 我们鼓励此操作，对防止会话劫持很有用，如果未指定和管理自己的会话 ID。
+; 它不是会话劫持防御的全部，而是一个好的开始。
+session.use_only_cookies = 1
+```
+
+
+
+#### 会话 - 名称
+
+```ini
+; 会话名称（用作 cookie 名称）。
+session.name = PHPSESSID
+```
+
+
+
+#### 会话 - 自动开始
+
+```ini
+; 在请求启动时初始化会话。
+session.auto_start = 0
+```
+
+
+
+#### 会话 - Cookie 生存时间
+
+```ini
+; Cookie 的生存时间（单位秒），如果为 0 则是浏览器重启为止。
+session.cookie_lifetime = 0
+```
+
+
+
+#### 会话 - Cookie 路径
+
+```ini
+; cookie 有效路径。
+session.cookie_path = /
+```
+
+
+
+#### 会话 - Cookie 域名
+
+```ini
+; cookie 有效域名。
+session.cookie_domain =
+```
+
+
+
+#### 会话 - Cookie 仅 HTTP
+
+```ini
+; 是否添加 httpOnly 标志到 cookie，这使得浏览器脚本语言如 JavaScript 无法访问它。
+session.cookie_httponly =
+```
+
+
+
+#### 会话 - Cookie 跨站
+
+```ini
+; 添加 SameSite 属性到 cookie 帮助减轻跨站点请求伪造（CSRF/XSRF）。
+; 当前有效值 Strict，Lax 或 "None"。
+; 使用 "None" 时，确保包含引号，因为在 ini 文件中 none 被解释为 false。
+session.cookie_samesite =
+```
+
+
 
 session.serialize_handler=php
 
