@@ -1761,27 +1761,105 @@ session.cookie_samesite =
 
 
 
-session.serialize_handler=php
+#### 会话 - 序列化处理程序
 
-session.gc_probability=1
+```ini
+; 用于序列化数据的处理程序。
+; php 是 PHP 的标准序列化器。
+session.serialize_handler = php
+```
 
-session.gc_divisor=1000
 
-session.gc_maxlifetime=1440
 
-session.referer_check=
+#### 会话 - 垃圾回收概率
 
-session.cache_limiter=mocache
+```ini
+; 定义每次会话初始化时启动垃圾收集过程的可能性。
+; 通过使用 gc_probability/gc_divisor 计算概率，例如 1/100 表示每个请求中 GC 进程启动的可能性为 1%。
+; 默认值：1
+; 开发环境值：1
+; 生产环境值：1
+session.gc_probability = 1
+```
 
-session.cache_expire=180
 
-session.use_trans_sid=0
+
+#### 会话 - 垃圾回收除数
+
+```ini
+; 定义每次会话初始化时启动垃圾收集过程的可能性。
+; 通过使用 gc_probability/gc_divisor 计算概率，例如 1/100 表示每个请求中 GC 进程启动的可能性为 1%。
+; 对于批量生产服务器，使用值为 1000 是一种更有效的方法。
+; 默认值：100
+; 开发环境值：1000
+; 生产环境值：1000
+session.gc_divisor = 1000
+```
+
+
+
+#### 会话 - 垃圾回收有效期
+
+```ini
+; 在此秒数之后，存储的数据将被视为垃圾，并由垃圾收集进程清除。
+session.gc_maxlifetime = 1440
+```
+
+
+
+#### 会话 - 来源检测
+
+```ini
+; 注意：如果你使用子目录选项存储会话文件（参见上面的 session.save_path），垃圾收集不会自动发生。
+; 你将需要通过 shell 脚本、cron 条目或其他方法进行自己的垃圾收集。
+; 例如，以下脚本等效于将 session.gc_maxlifetime 设置为 1440（1440 秒 = 24 分钟）：
+;   find /path/to/sessions -cmin +24 -type f | xargs rm
+; 检测 HTTP 来源，包含 ID 的外部存储 URL 无效。
+; HTTP_REFERER 包含此子字符串，会话才被视为有效。
+session.referer_check =
+```
+
+
+
+#### 会话 - 缓存限制
+
+```ini
+; 设置为 nocache, private, public 决定 HTTP 缓存方面。
+session.cache_limiter = nocache
+```
+
+
+
+#### 会话 - 缓存过期
+
+```ini
+; 文档在 n 分钟后过期。
+session.cache_expire = 180
+```
+
+
+
+#### 会话 - 使用传输 sid
+
+```ini
+; 默认禁用传输 sid 支持。
+; 使用传输 sid 可能危及用户安全。
+; 慎用此项。
+; - 用户可以发送包含活动会话 ID 的 URL 给别人，通过电邮、IRC 等。
+; - 包含活动会话 ID 的 URL 可以存储在公开访问的计算机中。
+; - 用户可以访问你的网站，用相同的会话 ID 始终使用存储在浏览器历史记录或书签中的 URL。
+session.use_trans_sid = 0
+```
+
+
 
 session.sid_length=26
 
 session.trans_sid_tags="a=href,area=href,frame=src,form="
 
 session.sid_bits_per_character=5
+
+
 
 ### [Assertion]
 
