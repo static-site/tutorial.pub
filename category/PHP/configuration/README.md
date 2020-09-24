@@ -1915,6 +1915,80 @@ session.sid_bits_per_character = 5
 
 
 
+#### 会话上传进度 - 跟踪
+
+```ini
+; 在 $_SESSION 中启用上传进度跟踪。
+; 默认值：On
+; 开发环境值：On
+; 生产环境值：On
+session.upload_progress.enabled = On
+```
+
+
+
+#### 会话上传进度 - 清理
+
+```ini
+; 立即清理进度信息，在所有 POST 数据被读取后（即上传完成）。
+; 默认值：On
+; 开发环境值：On
+; 生产环境值：On
+session.upload_progress.cleanup = On
+```
+
+
+
+#### 会话上传进度 - 前缀
+
+```ini
+; $_SESSION 中用于上传进度键的前缀
+; 默认值："upload_progress_"
+; 开发环境值："upload_progress_"
+; 生产环境值："upload_progress_"
+session.upload_progress.prefix = "upload_progress_"
+```
+
+
+
+#### 会话上传进度 - 名称
+
+```ini
+; $_SESSION 中的索引名称（与前缀连接）
+; 包含上传进度信息
+; 默认值："PHP_SESSION_UPLOAD_PROGRESS"
+; 开发环境值："PHP_SESSION_UPLOAD_PROGRESS"
+; 生产环境值："PHP_SESSION_UPLOAD_PROGRESS"
+session.upload_progress.name = "PHP_SESSION_UPLOAD_PROGRESS"
+```
+
+
+
+#### 会话上传进度 - 频率
+
+```ini
+; 上传进度多久更新。
+; 百分比（每个文件）或字节
+; 默认值："1%"
+; 开发环境值："1%"
+; 生产环境值："1%"
+session.upload_progress.freq =  "1%"
+```
+
+
+
+#### 会话上传进度 - 最小频率
+
+```ini
+; 更新之间的最小延迟，单位秒。
+; 默认值：1
+; 开发环境值：1
+; 生产环境值：1
+session.upload_progress.min_freq = "1"
+```
+
+
+
 ### [Assertion]
 
 断言
