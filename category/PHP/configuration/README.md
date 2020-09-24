@@ -1989,6 +1989,15 @@ session.upload_progress.min_freq = "1"
 
 
 
+#### 会话 - 惰性写入
+
+```ini
+; 仅在更改会话数据时才写入会话数据。默认启用。
+session.lazy_write = On
+```
+
+
+
 ### [Assertion]
 
 断言
