@@ -1853,11 +1853,65 @@ session.use_trans_sid = 0
 
 
 
-session.sid_length=26
+#### 会话 - sid 长度
 
-session.trans_sid_tags="a=href,area=href,frame=src,form="
+```ini
+; 设置会话 ID 的字符长度。该值可以在 22 到 256 之间。
+; 仅出于兼容性原因，才支持比默认短的长度。
+; 用户应该使用 32 或更多字符。
+; 默认值：32
+; 开发环境值：26
+; 生产环境值：26
+session.sid_length = 26
+```
 
-session.sid_bits_per_character=5
+
+
+#### 会话 - 传输 sid 标签
+
+```ini
+; URL 重写器将在一组定义的 HTML 标签中查找 URL。
+; <form> 是特殊的，如果你将它们包括在此处，重写器将添加一个隐藏的 <input> 字段以及附加信息到网址。
+; 除非指定 <form> 标签的 action 属性 URL，否则不会更改。
+; 注意所有有效条目都需要一个 "="，即使后面没有值。
+; 默认值："a=href,area=href,frame=src,form="
+; 开发环境值："a=href,area=href,frame=src,form="
+; 生产环境值："a=href,area=href,frame=src,form="
+session.trans_sid_tags = "a=href,area=href,frame=src,form="
+```
+
+
+
+#### 会话 - 传输 sid 主机
+
+```ini
+; 默认情况下， URL 重写器不会重写绝对 URL。
+; 要启用绝对路径重写，在运行时必须指定目标主机。也就是使用 ini_set()
+; <form> 是特殊的。PHP 将检查 action 属性的 URL，无论 session.trans_sid_tags 设置。
+; 如果未定义主机，HTTP_HOST 将用于允许的主机。
+; 示例值：php.net,www.php.net,wiki.php.net
+; 对多个主机使用 ","。不允许有空格。
+; 默认值：""
+; 开发环境值：""
+; 生产环境值：""
+session.trans_sid_hosts = ""
+```
+
+
+
+#### 会话 - sid 字符位数
+
+```ini
+; 定义每个字符存储多少位，转换二进制哈希数据转换为可读性时。
+; 可能的值：
+;   4 （4 bits：0-9, a-f）
+;   5 （5 bits：0-9, a-v）
+;   6 （6 bits：0-9, a-z, A-Z, "-", ","）
+; 默认值：4
+; 开发环境值：5
+; 生产环境值：5
+session.sid_bits_per_character = 5
+```
 
 
 
