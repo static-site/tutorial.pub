@@ -142,7 +142,67 @@ output_handler =
 
 
 
-zlib.output_compression=Off
+#### URL 重写器 - 标签
+
+```ini
+; URL 重写器通过使用输出缓冲区即时重写 URL。你可以通过此配置设置目标标签。
+; from 标签是特殊标签。它将添加隐藏的 input 标签以传递值。
+; 用法参考 session.trans_sid_tags。
+; 默认值："form="
+; 开发环境值："form="
+; 生产环境值："form="
+url_rewriter.tags = "form="
+```
+
+
+
+#### URL 重写器 - 主机
+
+```ini
+; 默认情况下，URL 重写器不会重写绝对 URL 或 form。
+; 如果要启用绝对 URL 重写，必须在运行时定义允许的主机。
+; 详细信息参考 session.trans_sid_hosts。
+; 默认值：""
+; 开发环境值：""
+; 生产环境值：""
+url_rewriter.hosts =
+```
+
+
+
+#### [zlib](https://www.php.net/manual/en/zlib.configuration.php) - 输出压缩
+
+```ini
+; 使用 zlib 库进行透明输出压缩
+; 此选项有效值为 off、on，或用于压缩的特定缓冲区大小（默认值 4KB）。
+; 注意：由于压缩的性质，结果块大小可能有所不同。
+; 由于压缩，PHP 输出的块每个只有几百字节。
+; 如果你希望更大的块大小以获得更好的性能，另外启用 output_buffering。
+; 注意：你需要使用 zlib.output_handler 而不是标准 output_handler，否则输出将被破坏。
+; 如果此选项设置为 On，浏览器发送 Accept-Encoding: gzip 或 deflate 标头则压缩页面，output_handler 必须设置为空。
+zlib.output_compression = Off
+```
+
+
+
+#### zlib - 输出压缩级别
+
+```ini
+; 用于透明输出压缩的压缩级别。
+; 指定一个值介于 0（无压缩） 到 9（最大压缩）之间。
+; 默认值 -1 让服务器决定要使用的级别。
+zlib.output_compression_level = -1
+```
+
+
+
+#### zlib - 输出处理程序
+
+```ini
+; 如果在此处激活 zlib.output_compression 则不能指定其他输出处理程序。
+; 此设置与 output_handler 相同，但顺序不同。
+zlib.output_handler =
+```
 
 
 
@@ -999,11 +1059,40 @@ allow_url_include = Off
 
 
 
+#### FTP 匿名密码
+
+```ini
+; 定义匿名 ftp 密码（你的电子邮件地址）。
+; PHP 默认设置为空。
+from = "john@doe.com"
+```
+
+
+
 #### 默认 Socket 超时
 
 ```ini
 ; 默认超时对于插口基于流（秒）
 default_socket_timeout = 60
+```
+
+
+
+#### 用户代理
+
+```ini
+; 定义用户代理字符串。PHP 的默认设置为空。
+user_agent = "PHP"
+```
+
+
+
+#### 自动检测行末
+
+```ini
+; 如果你的脚本要处理 Macintosh 系统中的文件，或者你运行在 Mac 上并且需要处理来自 unix 或 win32 的文件，
+; 设置此标志将导致 PHP 自动检测这些文件中的 EOL 字符，无论文件的来源 fgets() 和 file() 都可以工作。
+auto_detect_line_endings = Off
 ```
 
 
