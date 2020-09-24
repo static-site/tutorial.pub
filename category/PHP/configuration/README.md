@@ -1839,7 +1839,7 @@ session.cache_expire = 180
 
 
 
-#### 会话 - 使用传输 sid
+#### 会话 - 使用透明 sid
 
 ```ini
 ; 默认禁用传输 sid 支持。
@@ -1867,7 +1867,7 @@ session.sid_length = 26
 
 
 
-#### 会话 - 传输 sid 标签
+#### 会话 - 透明 sid 标签
 
 ```ini
 ; URL 重写器将在一组定义的 HTML 标签中查找 URL。
@@ -1882,7 +1882,7 @@ session.trans_sid_tags = "a=href,area=href,frame=src,form="
 
 
 
-#### 会话 - 传输 sid 主机
+#### 会话 - 透明 sid 主机
 
 ```ini
 ; 默认情况下， URL 重写器不会重写绝对 URL。
