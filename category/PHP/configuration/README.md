@@ -2020,6 +2020,61 @@ zend.assertions = 1
 
 
 
+#### 断言 - 激活
+
+```ini
+; Assert(expr); 默认激活。
+assert.active = On
+```
+
+
+
+#### 断言 - 异常
+
+```ini
+; 断言失败时抛出 AssertionError
+assert.exception = On
+```
+
+
+
+#### 断言 - 警告
+
+```ini
+; 为每个失败的断言发出 PHP 警告。激活时由 assert.exception 覆盖
+assert.warning = On
+```
+
+
+
+#### 断言 - 失败中止
+
+```ini
+; 默认情况下，失败不中止脚本。
+assert.bail = Off
+```
+
+
+
+#### 断言 - 回调
+
+```ini
+; 断言失败时调用用户函数。
+assert.callback = 0
+```
+
+
+
+#### 断言 - 静默 eval
+
+```ini
+; 用当前的 error_reporting() 评估表达式。
+; 如果你想在 eval() 周围 error_reporting(0)，请设置为真。
+assert.quiet_eval = 0
+```
+
+
+
 ### [COM]
 
 ### [mbstring]
